@@ -3,6 +3,8 @@ import logging
 
 import telnotif
 
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+
 
 def main():
     arg_parser = argparse.ArgumentParser()
@@ -13,8 +15,6 @@ def main():
     arg_parser.add_argument('--telegram-bot-token', required=True, help='token of the telegram bot')
 
     args = arg_parser.parse_args()
-
-    logging.basicConfig(level=logging.INFO)
 
     service = telnotif.Service(
         server_port=args.port,
