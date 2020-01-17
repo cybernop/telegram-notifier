@@ -1,0 +1,9 @@
+version: "2"
+services:
+    telegram-notifier:
+        build:
+          context: .
+        image: "telegram-notifier"
+        restart: always
+        command:
+          --port 9001 --name <name> --greeting <greeting> --telegram-bot-token <token>
