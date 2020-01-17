@@ -2,8 +2,6 @@ import logging
 
 from telegram import error, ext, ParseMode
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-
 
 class Notifier:
     def __init__(self, name, greeting, token):
